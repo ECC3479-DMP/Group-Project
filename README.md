@@ -1,1 +1,1 @@
-# ecc3479-Project
+# ECC3479-Project-Group
