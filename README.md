@@ -4,7 +4,7 @@ Group Members: Pranaav, Malidu, Dulain
 
 Project Overview
 
-This repository investigates how COVID‑19 policy stringency relates to labour‑market outcomes in Victoria and New South Wales. The project integrates multiple datasets—including government response indices, unemployment rates, and other COVID‑related indicators—and processes them into analysis‑ready formats using a reproducible raw → clean data pipeline.
+This repository investigates the effect of COVID-19 policy stringency on the unemployment rates in Victoria and New South Wales. The project integrates multiple datasets - including government response indices, unemployment rates, and other COVID-related indicators - and processes them into analysis-ready formats using a reproducible raw -> clean data pipeline.
 
 The repository is structured so that all raw data remains untouched, while all cleaned and merged datasets are generated through Python scripts stored in the  directory. Following the instructions in this README allows anyone to reproduce the final datasets exactly.
 
@@ -12,40 +12,45 @@ The repository is structured so that all raw data remains untouched, while all c
 
 Repository Structure 
 
-ECC3479-PROJECT/
+ECC3479-PROJECT-GROUP/
 │
 ├── README.md
 │
 ├── data/
-│   ├── raw/
+│   ├── clean/
 │   │   ├── .gitkeep
-│   │   ├── NSW_Covid.csv
-│   │   ├── Vic_covid.csv
-│   │   ├── Victoria_NSW_unemployment_rate.csv
+│   │   ├── merged_stringency_index.csv
+│   │   ├── merged_stringency_unemployment.csv
+│   │   ├── oxcgrt_nsw_state_stringency_monthly.csv
+│   │   └── oxcgrt_vic_state_stringency_monthly.csv
 │   │
-│   └── clean/
+│   └── raw/
 │       ├── .gitkeep
-│       ├── oxcgrt_nsw_state_stringency_monthly.csv
-│       ├── oxcgrt_vic_state_stringency_monthly.csv
-│       ├── merged_stringency_index.csv
-│       └── merged_stringency_unemployment.csv
+│       ├── NSW_Covid.csv
+│       ├── Vic_covid.csv
+│       ├── Victoria_NSW_unemployment_rate.csv
 │
-└── code/
-    ├── merge_stringency.py
-    └── merge_stringency_unemployment.py
+└── src/
+    ├── CleanCode_NSW_Lockdown.py
+    ├── CleanCode_VIC_Lockdown.py
+    ├── NSW_VIC_Lockdown_Merge.py
+    └── Unemployment_Stringency_Merge.py
+
+
 
 Folder Purpose
+
 • 	data/raw/
-Contains all original datasets exactly as obtained.
+Contains all original datasets.
 These files are never modified.
-If a dataset cannot be included due to licensing or size limits, instructions for obtaining it are provided.
 
 • 	data/clean/
-Contains all cleaned, transformed, and merged datasets produced by the scripts in .
+Contains all cleaned, transformed, and merged datasets produced by the scripts in.
 These files are fully reproducible.
-• 	code/
+
+• 	src/
 Contains Python scripts that transform raw data into cleaned datasets.
-Running these scripts in order will regenerate all files in .
+Running these scripts in order will regenerate all files in.
 
 -------------------------------------------------------
 
