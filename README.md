@@ -54,13 +54,16 @@ Running these scripts in order will regenerate all files in.
 
 -------------------------------------------------------
 
-manual steps outside of the code
+Manual steps outside of the code
+
 Raw Data: 
   - NSW_Covid.csv 
     - Got from oxford 
-
   - Vic_covid.csv 
+    - Got from oxford 
   - Victoria_NSW_unemploymnet_rate.csv
+    - Got from ABS, Downloaded excel file with detailed unemployment stats for all of australia and its states. 
+    - 
 
 
 
@@ -69,6 +72,7 @@ Raw Data:
 
 
 How to Run the Project From Scratch
+
 1. Install Required Software
 This project uses Python 3.10+.
 Install required packages:
@@ -76,6 +80,7 @@ pip install pandas
 
 
 2. Ensure Raw Data Is in Place
+
 Place the following files in data/raw/:
 - Victoria_NSW_unemployment_rate.csv
 - NSW_Covid.csv
@@ -86,6 +91,7 @@ Raw data must remain unchanged.
 
 
 3. Run the Scripts in Order
+
 The scripts must be executed in the following sequence:
 - CleanCode_NSW_Lockdown.py
 - CleanCode_Vic_Lockdown.py
@@ -94,6 +100,7 @@ The scripts must be executed in the following sequence:
 
 
 Data Codebook
+
 merged_stringency_index.csv
 - Date
 - Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
@@ -119,6 +126,7 @@ oxcgrt_nsw_state_stringency_monthly.csv
 
 
 Script Descriptions
+
 CleanCode_NSW_Lockdown.py
 - Only gets data for Victoria, STATE_TOTAL
 - Only gets data for first of every month, for montly data
