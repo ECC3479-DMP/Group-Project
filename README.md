@@ -92,10 +92,10 @@ oxcgrt_nsw_state_stringency_monthly.csv
 - CountryName
 - CountryCode : Australia becomes 'AUS' 
 - RegionName  : States 
-- RegionCode  : e.g for victoria : Greater_Melbourne, Victoria_rest, Victoria
-- Jurisdiction
-- Date
-- StringencyIndex_Average
+- RegionCode  : e.g for victoria: AUS_VIC
+- Jurisdiction :  e.g for victoria : Greater Melbourne, Rest of Victoria, State Total
+- Date 
+- StringencyIndex_Average : index out of 100 (Severity of Covid Policies)
 
 
 
