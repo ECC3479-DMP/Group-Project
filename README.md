@@ -46,6 +46,7 @@ These files are fully reproducible.
 Contains Python scripts that transform raw data into cleaned datasets.
 Running these scripts in order will regenerate all files in .
 
+-------------------------------------------------------
 
 How to Run the Project From Scratch
 1. Install Required Software
