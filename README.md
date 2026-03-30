@@ -65,8 +65,12 @@ Place the following files in data/raw/:
 
 If any file is missing, download it from the source listed in your assignment instructions or LMS.
 Raw data must remain unchanged.
+
+
 3. Run the Scripts in Order
 The scripts must be executed in the following sequence:
+- CleanCode_NSW_Lockdown.py
+- CleanCode_Vic_Lockdown.py
 - merge_stringency.py
 - Reads VIC and NSW stringency files from data/clean/
 - Produces merged_stringency_index.csv
