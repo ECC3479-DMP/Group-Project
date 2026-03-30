@@ -39,6 +39,7 @@ Folder Purpose
 Contains all original datasets exactly as obtained.
 These files are never modified.
 If a dataset cannot be included due to licensing or size limits, instructions for obtaining it are provided.
+
 • 	data/clean/
 Contains all cleaned, transformed, and merged datasets produced by the scripts in .
 These files are fully reproducible.
@@ -62,7 +63,6 @@ Place the following files in data/raw/:
 - Vic_covid.csv
 
 
-If any file is missing, download it from the source listed in your assignment instructions or LMS.
 Raw data must remain unchanged.
 
 
@@ -70,45 +70,51 @@ Raw data must remain unchanged.
 The scripts must be executed in the following sequence:
 - CleanCode_NSW_Lockdown.py
 - CleanCode_Vic_Lockdown.py
-- merge_stringency.py
-- Reads VIC and NSW stringency files from data/clean/
-- Produces merged_stringency_index.csv
-- merge_stringency_unemployment.py
-- Reads unemployment data from data/raw/
-- Reads merged stringency from data/clean/
-- Produces merged_stringency_unemployment.csv
-After running both scripts, the data/clean/ folder will contain all analysis‑ready datasets.
+- NSW,VIC,Lockdown_Merge.py
+- Unemployment_Stringency_Merge.py
 
-Manual Steps Required
-Some steps occur outside the code:
-- Download raw datasets from their official sources (ABS, OxCGRT, etc.).
-- Place them into data/raw/ before running any scripts.
-- Ensure the OxCGRT monthly stringency files for VIC and NSW are placed in data/clean/ before running the first script.
-These steps are necessary because some datasets cannot be redistributed due to licensing restrictions.
 
 Data Codebook
 merged_stringency_index.csv
-|  |  | 
-|  |  | 
-|  |  | 
-|  |  | 
-
+- Date
+- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
+- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
 
 merged_stringency_unemployment.csv
-|  |  | 
-|  |  | 
-|  |  | 
-|  |  | 
-|  |  | 
-|  |  | 
+- Date
+- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
+- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
+- Vic_unemployment : Unemployment Rate - Victoria
+- NSW_unemployment : Unemployment Rate - Victoria
+
+oxcgrt_vic_state_stringency_monthly.csv 
+oxcgrt_nsw_state_stringency_monthly.csv 
+- CountryName
+- CountryCode : Australia becomes 'AUS' 
+- RegionName  : States 
+- RegionCode  : e.g for victoria : Greater_Melbourne, Victoria_rest, Victoria
+- Jurisdiction
+- Date
+- StringencyIndex_Average
 
 
 
 Script Descriptions
+CleanCode_NSW_Lockdown.py
+- Only gets data for Victoria, STATE_TOTAL
+- Only gets data for first of every month, for montly data
+- Only Keeps CountryName,CountryCode,RegionName,RegionCode,Jurisdiction,Date,StringencyIndex_Average
+
+CleanCode_Vic_Lockdown.py
+- Only gets data for Victoria, STATE_TOTAL
+- Only gets data for first of every month, for montly data
+- Only Keeps CountryName,CountryCode,RegionName,RegionCode,Jurisdiction,Date,StringencyIndex_Average
+
 merge_stringency.py
 - Loads VIC and NSW stringency datasets.
 - Merges them on the Date column.
 - Outputs merged_stringency_index.csv.
+
 merge_stringency_unemployment.py
 - Loads unemployment dataset from data/raw/.
 - Converts dates from "Aug-2024" to "2024-08-01".
