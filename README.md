@@ -19,8 +19,6 @@ ECC3479-PROJECT/
 ├── data/
 │   ├── raw/
 │   │   ├── .gitkeep
-│   │   ├── Hours worked COVID.csv
-│   │   ├── Mortality Jan 2020-Jul 2021.csv
 │   │   ├── NSW_Covid.csv
 │   │   ├── Vic_covid.csv
 │   │   ├── Victoria_NSW_unemployment_rate.csv
