@@ -49,6 +49,20 @@ Running these scripts in order will regenerate all files in .
 
 -------------------------------------------------------
 
+manual steps outside of the code
+Raw Data: 
+  - NSW_Covid.csv 
+    - Got from oxford 
+
+  - Vic_covid.csv 
+  - Victoria_NSW_unemploymnet_rate.csv
+
+
+
+
+
+
+
 How to Run the Project From Scratch
 1. Install Required Software
 This project uses Python 3.10+.
@@ -121,6 +135,10 @@ merge_stringency_unemployment.py
 - Merges with stringency dataset using a left join.
 - Fills missing stringency values with 0.
 - Outputs merged_stringency_unemployment.csv.
+
+
+Final Cleaned Data: 
+merged_stringency_index.csv
 
 Reproducibility Guarantee
 If the raw datasets are placed correctly and the required Python packages are installed, running the scripts in the order listed will regenerate all cleaned datasets exactly as submitted.
