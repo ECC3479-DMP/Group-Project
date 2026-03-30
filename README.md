@@ -58,16 +58,17 @@ Manual steps outside of the code
 
 Raw Data: 
   - NSW_Covid.csv 
-    - Got from oxford 
+    - Got from Oxford Covid-19 Government Response Tracker (OxCGRT) github. Data/timeseries_indicies/OxCGRT_compact_subnational_v1.csv
+    - Got all data associated with NSW 
+
   - Vic_covid.csv 
-    - Got from oxford 
+    - Got from Oxford Covid-19 Government Response Tracker (OxCGRT) github. Data/timeseries_indicies/OxCGRT_compact_subnational_v1.csv
+    - Got all data associated with VIC 
+
   - Victoria_NSW_unemploymnet_rate.csv
-    - Got from ABS, Downloaded excel file with detailed unemployment stats for all of australia and its states. 
-    - 
-
-
-
-
+    - Got from ABS, Downloaded excel file with detailed Labour Force Stats for all of australia and its states. 
+    - In excel create a new sheet with only data for VIC and NSW unemployment 
+    - Convert that to CSV file. 
 
 
 
