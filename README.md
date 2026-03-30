@@ -102,6 +102,8 @@ The scripts must be executed in the following sequence:
 
 Data Codebook
 
+-- Explanation on variables of /clean data sets
+
 merged_stringency_index.csv
 - Date
 - Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
@@ -123,6 +125,32 @@ oxcgrt_nsw_state_stringency_monthly.csv
 - Jurisdiction :  e.g for victoria : Greater Melbourne, Rest of Victoria, State Total
 - Date 
 - StringencyIndex_Average : index out of 100 (Severity of Covid Policies)
+
+// StringencyIndex_Average is a measure calculated by the Oxford COVID-19 Government Response Tracker (OxCGRT) which summarises how strict government COVID-19 policies were on a given day. 
+
+Although OxCGRT collects many more policy indicators, the Stringency Index is calculated from nine core containment and public-information indicators:
+
+C1: School closing
+
+C2: Workplace closing
+
+C3: Cancel public events
+
+C4: Restrictions on gatherings
+
+C5: Close public transport
+
+C6: Stay-at-home requirements
+
+C7: Restrictions on internal movement
+
+C8: International travel controls
+
+H1: Public information campaigns
+
+Each indicator is converted to a normalised score, and the index is computed as the average of these nine values. This produces the StringencyIndex_Average used in our dataset.
+
+In our project, we convert the daily index into a monthly measure by grouping by year and month and taking the first available value for each month.
 
 
 
