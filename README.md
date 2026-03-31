@@ -8,7 +8,7 @@ This repository investigates the effect of COVID-19 policy stringency on the une
 
 The repository is structured so that all raw data remains untouched, while all cleaned and merged datasets are generated through Python scripts stored in the  directory. Following the instructions in this README allows anyone to reproduce the final datasets exactly.
 
-
+----------------------------------------------------------------------------------------------------
 
 Repository Structure 
 
@@ -36,7 +36,7 @@ ECC3479-PROJECT-GROUP/
     ├── FormatCode_VIC_NSW_Stringency.py
     └── Unemployment_Stringency_Merge.py
 
-
+----------------------------------------------------------------------------------------------------
 
 Folder Purpose
 
@@ -52,7 +52,7 @@ These files are fully reproducible.
 Contains Python scripts that transform raw data into cleaned datasets.
 Running these scripts in order will regenerate all files in.
 
--------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 Manual steps outside of the code
 
@@ -67,7 +67,7 @@ Raw Data:
     - https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia-detailed/latest-release
     - After accessing the above link, scroll until 'Labour force status Monthly (February)' and then download Table 02. Labour force status by state, territory, greater capital city and rest of state (ASGS) and sex
 
-
+----------------------------------------------------------------------------------------------------
 
 How to Run the Project From Scratch
 
@@ -95,9 +95,12 @@ The scripts must be executed in the following sequence:
 - CleanCode_VIC_NSW_Stringency.py
 - FormatCode_VIC_ Stringency.py *
 - CleanCode_VIC_NSW_Unemployment.py
+- Unemployment_Stringency_Merge.py
 
 *This was to format our target states into columns rather than rows as given in raw data
 We chose to do this separately so that we could keep track of errors easier
+
+----------------------------------------------------------------------------------------------------
 
 Data Codebook
 
@@ -147,7 +150,7 @@ Each indicator is converted to a normalised score, and the index is computed as 
 
 In our project, we convert the daily index into a monthly measure by grouping by year and month and taking the first available value for each month.
 
-
+----------------------------------------------------------------------------------------------------
 
 Script Descriptions
 
@@ -178,7 +181,8 @@ merge_stringency_unemployment.py
 
 
 Final Cleaned Data: 
-merged_stringency_index.csv
+Unemployment_Stringency_Merge.py
+
 
 Reproducibility Guarantee
 If the raw datasets are placed correctly and the required Python packages are installed, running the scripts in the order listed will regenerate all cleaned datasets exactly as submitted.
