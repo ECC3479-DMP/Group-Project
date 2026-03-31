@@ -8,7 +8,7 @@ This repository investigates the effect of COVID-19 policy stringency on the une
 
 The repository is structured so that all raw data remains untouched, while all cleaned and merged datasets are generated through Python scripts stored in the  directory. Following the instructions in this README allows anyone to reproduce the final datasets exactly.
 
-
+----------------------------------------------------------------------------------------------------
 
 Repository Structure 
 
@@ -36,7 +36,7 @@ ECC3479-PROJECT-GROUP/
     ├── FormatCode_VIC_NSW_Stringency.py
     └── Unemployment_Stringency_Merge.py
 
-
+----------------------------------------------------------------------------------------------------
 
 Folder Purpose
 
@@ -52,7 +52,7 @@ These files are fully reproducible.
 Contains Python scripts that transform raw data into cleaned datasets.
 Running these scripts in order will regenerate all files in.
 
--------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 Manual steps outside of the code
 
@@ -67,7 +67,7 @@ Raw Data:
     - https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia-detailed/latest-release
     - After accessing the above link, scroll until 'Labour force status Monthly (February)' and then download Table 02. Labour force status by state, territory, greater capital city and rest of state (ASGS) and sex
 
-
+----------------------------------------------------------------------------------------------------
 
 How to Run the Project From Scratch
 
@@ -95,34 +95,33 @@ The scripts must be executed in the following sequence:
 - CleanCode_VIC_NSW_Stringency.py
 - FormatCode_VIC_ Stringency.py *
 - CleanCode_VIC_NSW_Unemployment.py
+- Unemployment_Stringency_Merge.py
 
 *This was to format our target states into columns rather than rows as given in raw data
 We chose to do this separately so that we could keep track of errors easier
+
+----------------------------------------------------------------------------------------------------
 
 Data Codebook
 
 -- Explanation on variables of /clean data sets
 
-merged_stringency_index.csv
-- Date
-- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
-- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
-
 merged_stringency_unemployment.csv
 - Date
-- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
-- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
-- Vic_unemployment : Unemployment Rate - Victoria
-- NSW_unemployment : Unemployment Rate - Victoria
+- Vic_Stringency : index out of 100 (Severity of Covid Policies) for Victoria
+- NSW_Stringency : index out of 100 (Severity of Covid Policies) for NSW
+- VIC_Unemployment : Unemployment Rate - Victoria
+- NSW_Unemployment : Unemployment Rate - NSW
 
-oxcgrt_vic_state_stringency_monthly.csv 
-oxcgrt_nsw_state_stringency_monthly.csv 
-- CountryName
-- CountryCode : Australia becomes 'AUS' 
-- RegionName  : States 
-- RegionCode  : e.g for victoria: AUS_VIC
-- Jurisdiction :  e.g for victoria : Greater Melbourne, Rest of Victoria, State Total
+unemployment_nsw_vic.csv
+- Date
+- VIC_Unemployment_Rate : Unemployment Rate - Victoria
+- NSW_Unemployment_Rate : Unemployment Rate - Victoria
+
+vic_nsw_state_stringency_monthly_firstday.csv 
 - Date 
+- RegionCode  : e.g. for Victoria: AUS_VIC
+- Jurisdiction :  e.g. for Victoria : Greater Melbourne, Rest of Victoria, State Total
 - StringencyIndex_Average : index out of 100 (Severity of Covid Policies)
 
 // StringencyIndex_Average is a measure calculated by the Oxford COVID-19 Government Response Tracker (OxCGRT) which summarises how strict government COVID-19 policies were on a given day. 
@@ -151,7 +150,7 @@ Each indicator is converted to a normalised score, and the index is computed as 
 
 In our project, we convert the daily index into a monthly measure by grouping by year and month and taking the first available value for each month.
 
-
+----------------------------------------------------------------------------------------------------
 
 Script Descriptions
 
@@ -184,7 +183,8 @@ Unemployment_Stringency_Merge.py
 
 
 Final Cleaned Data: 
-merged_stringency_index.csv
+Unemployment_Stringency_Merge.py
+
 
 Reproducibility Guarantee
 If the raw datasets are placed correctly and the required Python packages are installed, running the scripts in the order listed will regenerate all cleaned datasets exactly as submitted.
