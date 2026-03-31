@@ -41,7 +41,7 @@ ECC3479-PROJECT-GROUP/
 Folder Purpose
 
 • 	data/raw/
-Contains all original datasets.
+Contains all original datasets as obtained from original sources (ABS and Oxford)
 These files are never modified.
 
 • 	data/clean/
@@ -57,18 +57,16 @@ Running these scripts in order will regenerate all files in.
 Manual steps outside of the code
 
 Raw Data: 
-  - NSW_Covid.csv 
-    - Got from Oxford Covid-19 Government Response Tracker (OxCGRT) github. Data/timeseries_indicies/OxCGRT_compact_subnational_v1.csv
-    - Got all data associated with NSW 
+  - OxCGRT_compact_subnational_v1.csv 
+    - Got from Oxford Covid-19 Government Response Tracker (OxCGRT) github. 
+    - https://github.com/OxCGRT/covid-policy-dataset/tree/main/data
+    - After accessing this link, download file through this navigation: data/timeseries_indicies/OxCGRT_compact_subnational_v1.csv
 
-  - Vic_covid.csv 
-    - Got from Oxford Covid-19 Government Response Tracker (OxCGRT) github. Data/timeseries_indicies/OxCGRT_compact_subnational_v1.csv
-    - Got all data associated with VIC 
-
-  - Victoria_NSW_unemploymnet_rate.csv
+  - ABS_unemployment_rates.xlsv
     - Got from ABS, Downloaded excel file with detailed Labour Force Stats for all of australia and its states. 
-    - In excel create a new sheet with only data for VIC and NSW unemployment 
-    - Convert that to CSV file. 
+    - https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia-detailed/latest-release
+    - After accessing the above link, scroll until 'Labour force status Monthly (February)' and then download Table 02. Labour force status by state, territory, greater capital city and rest of state (ASGS) and sex
+    *** We chose to start from February as we are starting analysis from exactly 10 years back.
 
 
 
@@ -83,9 +81,8 @@ pip install pandas
 2. Ensure Raw Data Is in Place
 
 Place the following files in data/raw/:
-- Victoria_NSW_unemployment_rate.csv
-- NSW_Covid.csv
-- Vic_covid.csv
+- OxCGRT_compact_subnational_v1.csv
+- ABS_unemployment_rates.xlsv
 
 
 Raw data must remain unchanged.

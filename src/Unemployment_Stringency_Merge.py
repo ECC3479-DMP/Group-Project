@@ -15,7 +15,7 @@ unemp = pd.read_csv(unemployment_path)
 
 # -----------------------------
 # Convert unemployment dates
-# "Aug-2024" → "2024-08-01"
+# "Aug-2024" -> "2024-08-01"
 # -----------------------------
 unemp["Date"] = pd.to_datetime(unemp["Date"], format="%b-%Y")
 unemp["Date"] = unemp["Date"].dt.strftime("%Y-%m-%d")
