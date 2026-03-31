@@ -19,7 +19,7 @@ ECC3479-PROJECT-GROUP/
 ├── data/
 │   ├── clean/
 │   │   ├── .gitkeep
-│   │   ├── merged_stringency_index.csv
+│   │   ├── merged_stringency_unemployment.csv
 │   │   ├── unemployment_nsw_vic.csv
 │   │   ├── vic_nsw_state_stringency_monthly_firstday.csv
 │   │   └── vic_nsw_stringency_pivot.csv
