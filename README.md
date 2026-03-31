@@ -66,7 +66,6 @@ Raw Data:
     - Got from ABS, Downloaded excel file with detailed Labour Force Stats for all of australia and its states. 
     - https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia-detailed/latest-release
     - After accessing the above link, scroll until 'Labour force status Monthly (February)' and then download Table 02. Labour force status by state, territory, greater capital city and rest of state (ASGS) and sex
-    *** We chose to start from February as we are starting analysis from exactly 10 years back.
 
 
 

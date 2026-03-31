@@ -1,7 +1,15 @@
 import pandas as pd
+from pathlib import Path
+
+# Paths relative to project root - works on any machine
+raw_path = Path("data/raw/ABS_Unemployment_rates.xlsx")
+out_path = Path("data/clean/unemployment_nsw_vic.csv")
+
+# Ensure output folder exists
+out_path.parent.mkdir(parents=True, exist_ok=True)
 
 # Load the sheet, using row 10 as the header (0-indexed = 9)
-df = pd.read_excel("/Users/malidug07/Library/CloudStorage/OneDrive-MonashUniversity/2026 Sem 1/ECC3479/ECC3479-Project-Group/data/raw/ABS_Unemployment_rates.xlsx", sheet_name="Data1", header=9)
+df = pd.read_excel(raw_path, sheet_name="Data1", header=9)
 
 # Helper to convert Excel column letter to 0-indexed integer
 def col_letter_to_index(col):
@@ -29,7 +37,7 @@ df_clean = df_clean[df_clean["Date"] >= "2016-02-01"]
 df_clean = df_clean.dropna(how="all")
 
 # Save to CSV
-df_clean.to_csv("unemployment_nsw_vic.csv", index=False)
+df_clean.to_csv(out_path, index=False)
 
 print(df_clean.head())
-print(f"\nSaved {len(df_clean)} rows to unemployment_nsw_vic.csv")
+print(f"\nSaved {len(df_clean)} rows to {out_path}")
