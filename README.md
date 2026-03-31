@@ -20,20 +20,20 @@ ECC3479-PROJECT-GROUP/
 │   ├── clean/
 │   │   ├── .gitkeep
 │   │   ├── merged_stringency_index.csv
-│   │   ├── merged_stringency_unemployment.csv
-│   │   ├── oxcgrt_nsw_state_stringency_monthly.csv
-│   │   └── oxcgrt_vic_state_stringency_monthly.csv
+│   │   ├── unemployment_nsw_vic.csv
+│   │   ├── vic_nsw_state_stringency_monthly_firstday.csv
+│   │   └── vic_nsw_stringency_pivot.csv
 │   │
 │   └── raw/
 │       ├── .gitkeep
-│       ├── NSW_Covid.csv
-│       ├── Vic_covid.csv
-│       ├── Victoria_NSW_unemployment_rate.csv
+│       ├── ABS_Unemployment_rates.csv
+│       ├── OxCGRT_compact_subnational_v1.csv
+│      
 │
 └── src/
-    ├── CleanCode_NSW_Lockdown.py
-    ├── CleanCode_VIC_Lockdown.py
-    ├── NSW_VIC_Lockdown_Merge.py
+    ├── CleanCode_VIC_NSW_Stringency.py
+    ├── CleanCode_VIC_NSW_Unemployment_rates.py
+    ├── FormatCode_VIC_NSW_Stringency.py
     └── Unemployment_Stringency_Merge.py
 
 
@@ -74,14 +74,16 @@ How to Run the Project From Scratch
 1. Install Required Software
 This project uses Python 3.10+.
 Install required packages:
-pip install pandas
+pip install pandas 
+pip install openpyxl
+(use pip3 for Mac)
 
 
 2. Ensure Raw Data Is in Place
 
 Place the following files in data/raw/:
 - OxCGRT_compact_subnational_v1.csv
-- ABS_unemployment_rates.xlsv
+- ABS_unemployment_rates.xlsx
 
 
 Raw data must remain unchanged.
@@ -90,11 +92,12 @@ Raw data must remain unchanged.
 3. Run the Scripts in Order
 
 The scripts must be executed in the following sequence:
-- CleanCode_NSW_Lockdown.py
-- CleanCode_Vic_Lockdown.py
-- NSW,VIC,Lockdown_Merge.py
-- Unemployment_Stringency_Merge.py
+- CleanCode_VIC_NSW_Stringency.py
+- FormatCode_VIC_ Stringency.py *
+- CleanCode_VIC_NSW_Unemployment.py
 
+*This was to format our target states into columns rather than rows as given in raw data
+We chose to do this separately so that we could keep track of errors easier
 
 Data Codebook
 
