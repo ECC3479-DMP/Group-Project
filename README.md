@@ -160,10 +160,10 @@ Script Descriptions
 CleanCode_VIC_NSW_STRINGENCY.py
 - Only gets data for Victoria, NSW , STATE_TOTAL
 - Only gets data for first of every month, for montly data
-- Only Keeps CountryName,CountryCode,RegionName,RegionCode,Jurisdiction,Date,StringencyIndex_Average
-- Output File: vic_nsw_state
+- Only Keeps Date,RegionCode,Jurisdiction,StringencyIndex_Average
+- Output File: vic_nsw_state_stringency_monthly_firstday.csv
 
-CleanCode_Vic_Lockdown.py
+Form.py
 - Only gets data for Victoria, STATE_TOTAL
 - Only gets data for first of every month, for montly data
 - Only Keeps CountryName,CountryCode,RegionName,RegionCode,Jurisdiction,Date,StringencyIndex_Average
