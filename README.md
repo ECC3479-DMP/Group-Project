@@ -154,8 +154,6 @@ In our project, we convert the daily index into a monthly measure by grouping by
 
 Script Descriptions
 
-
-
 CleanCode_VIC_NSW_Stringency.py
 - Load OxCGRT_compact_subnational_v1.csv for data/raw 
 - Only gets data for Victoria, NSW , STATE_TOTAL
