@@ -152,10 +152,13 @@ In our project, we convert the daily index into a monthly measure by grouping by
 
 Script Descriptions
 
-CleanCode_NSW_Lockdown.py
-- Only gets data for Victoria, STATE_TOTAL
+
+
+CleanCode_VIC_NSW_STRINGENCY.py
+- Only gets data for Victoria, NSW , STATE_TOTAL
 - Only gets data for first of every month, for montly data
 - Only Keeps CountryName,CountryCode,RegionName,RegionCode,Jurisdiction,Date,StringencyIndex_Average
+- Output File: vic_nsw_state
 
 CleanCode_Vic_Lockdown.py
 - Only gets data for Victoria, STATE_TOTAL
