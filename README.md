@@ -103,26 +103,22 @@ Data Codebook
 
 -- Explanation on variables of /clean data sets
 
-merged_stringency_index.csv
-- Date
-- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
-- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
-
 merged_stringency_unemployment.csv
 - Date
-- Vic_stringency : index out of 100 (Severity of Covid Policies) for Victoria
-- NSW_stringency : index out of 100 (Severity of Covid Policies) for NSW
-- Vic_unemployment : Unemployment Rate - Victoria
-- NSW_unemployment : Unemployment Rate - Victoria
+- Vic_Stringency : index out of 100 (Severity of Covid Policies) for Victoria
+- NSW_Stringency : index out of 100 (Severity of Covid Policies) for NSW
+- VIC_Unemployment : Unemployment Rate - Victoria
+- NSW_Unemployment : Unemployment Rate - NSW
 
-oxcgrt_vic_state_stringency_monthly.csv 
-oxcgrt_nsw_state_stringency_monthly.csv 
-- CountryName
-- CountryCode : Australia becomes 'AUS' 
-- RegionName  : States 
-- RegionCode  : e.g for victoria: AUS_VIC
-- Jurisdiction :  e.g for victoria : Greater Melbourne, Rest of Victoria, State Total
+unemployment_nsw_vic.csv
+- Date
+- VIC_Unemployment_Rate : Unemployment Rate - Victoria
+- NSW_Unemployment_Rate : Unemployment Rate - Victoria
+
+vic_nsw_state_stringency_monthly_firstday.csv 
 - Date 
+- RegionCode  : e.g. for Victoria: AUS_VIC
+- Jurisdiction :  e.g. for Victoria : Greater Melbourne, Rest of Victoria, State Total
 - StringencyIndex_Average : index out of 100 (Severity of Covid Policies)
 
 // StringencyIndex_Average is a measure calculated by the Oxford COVID-19 Government Response Tracker (OxCGRT) which summarises how strict government COVID-19 policies were on a given day. 
