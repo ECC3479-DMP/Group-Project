@@ -157,28 +157,30 @@ Script Descriptions
 
 
 
-CleanCode_VIC_NSW_STRINGENCY.py
+CleanCode_VIC_NSW_Stringency.py
+- Load OxCGRT_compact_subnational_v1.csv for data/raw 
 - Only gets data for Victoria, NSW , STATE_TOTAL
 - Only gets data for first of every month, for montly data
 - Only Keeps Date,RegionCode,Jurisdiction,StringencyIndex_Average
 - Output File: vic_nsw_state_stringency_monthly_firstday.csv
 
-FormatCode_VIC_NSW_STRINGENCY.py
+FormatCode_VIC_NSW_Stringency.py
 - Format vic_nsw_state_stringency_monthly_firstday.csv 
 - so its in the form, 3 colums: Date,StringencyIndex_Average_NSW,StringencyIndex_Average_VIC
 - this is saved into vic_nsw_stringency_pivot.csv
 
-merge_stringency.py
-- Loads VIC and NSW stringency datasets.
-- Merges them on the Date column.
-- Outputs merged_stringency_index.csv.
+CleanCode_VIC_NSW_Unemployment_rates.py
+- Loads 'ABS_Unemployment_rates.xlsx' from data/raw 
+- Only get Victoria Unemployment and NSW unemployment data 
+- format in the form: Date,NSW_Unemployment_Rate,VIC_Unemployment_Rate
+- saved into csv file: unemployment_nsw_vic.csv
 
-merge_stringency_unemployment.py
-- Loads unemployment dataset from data/raw/.
-- Converts dates from "Aug-2024" to "2024-08-01".
+Unemployment_Stringency_Merge.py
+- Loads vic_nsw_stringency_pivot.csv 
+- Loads unemployment_nsw_vic.csv
 - Merges with stringency dataset using a left join.
 - Fills missing stringency values with 0.
-- Outputs merged_stringency_unemployment.csv.
+- Outputs merged_stringency_unemployment.csv
 
 
 Final Cleaned Data: 
