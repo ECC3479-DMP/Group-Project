@@ -12,6 +12,8 @@ The repository is structured so that all raw data remains untouched, while all c
 
 Repository Structure 
 
+## Project Structure
+
 ECC3479-PROJECT-GROUP/
 │
 ├── README.md
@@ -27,8 +29,16 @@ ECC3479-PROJECT-GROUP/
 │   └── raw/
 │       ├── .gitkeep
 │       ├── ABS_Unemployment_rates.csv
-│       ├── OxCGRT_compact_subnational_v1.csv
-│      
+│       └── OxCGRT_compact_subnational_v1.csv
+│
+├── docs/
+│   └── .gitkeep
+│
+├── jupyter/
+│   └── EDA.ipynb
+│
+├── outputs/
+│   └── .gitkeep
 │
 └── src/
     ├── CleanCode_VIC_NSW_Stringency.py
@@ -186,3 +196,13 @@ Unemployment_Stringency_Merge.py
 
 Reproducibility Guarantee
 If the raw datasets are placed correctly and the required Python packages are installed, running the scripts in the order listed will regenerate all cleaned datasets exactly as submitted.
+
+--- 
+EDA 
+The EDA section contains all exploratory data analysis used to understand the behaviour of unemployment and stringency before modelling. 
+
+ - It provides essential checks on data quality, identifies trends, COVID‑driven spikes, and differences between VIC and NSW. 
+
+ - Through time‑seris plots, rolling correlations, scatter plots, lagged relationships, histograms, and DiD visuals, the EDA helps reveal how the variables move over time, where relationships strengthen or weaken, and whether the data aligns with economic expectations. 
+
+ This step is Important because it guides the modelling approach and ensures the dataset is reliable and suitable for causal analysis. 
