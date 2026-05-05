@@ -12,8 +12,6 @@ The repository is structured so that all raw data remains untouched, while all c
 
 Repository Structure 
 
-## Project Structure
-
 ECC3479-PROJECT-GROUP/
 │
 ├── README.md
