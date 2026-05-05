@@ -211,7 +211,7 @@ The EDA section contains all exploratory data analysis used to understand the be
 --- 
 Analysis
 - DiD used to estimate impact of Victoria’s stricter COVID lockdowns on unemployment vs NSW
-- Acute 2016–2021 model is main causal estimate
+- Pre-COVID and acute 2016–2021 model is main causal estimate
 - Treatment effect negative but statistically insignificant
 - Parallel trends supported
 - Validity limited by industry differences, spillovers, and measurement error
