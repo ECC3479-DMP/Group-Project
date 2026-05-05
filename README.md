@@ -207,3 +207,12 @@ The EDA section contains all exploratory data analysis used to understand the be
  - Through time‑seris plots, rolling correlations, scatter plots, lagged relationships, histograms, and DiD visuals, the EDA helps reveal how the variables move over time, where relationships strengthen or weaken, and whether the data aligns with economic expectations. 
 
  This step is Important because it guides the modelling approach and ensures the dataset is reliable and suitable for causal analysis. 
+
+--- 
+Analysis
+- DiD used to estimate impact of Victoria’s stricter COVID lockdowns on unemployment vs NSW
+- Acute 2016–2021 model is main causal estimate
+- Treatment effect negative but statistically insignificant
+- Parallel trends supported
+- Validity limited by industry differences, spillovers, and measurement error
+- Full analysis in analysis.ipynb
