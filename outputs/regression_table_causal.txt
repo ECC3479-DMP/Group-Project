@@ -1,6 +1,8 @@
+SUMMARY TABLE: ACUTE (CAUSAL) VS FULL-PERIOD (NON-CAUSAL) MODELS
+
 
 ====================================================
-               Acute DiD (2016–2021) Full-period DiD
+               Acute DiD (2016-2021) Full-period DiD
 ----------------------------------------------------
 Intercept      4.7900***             4.7900***      
                (0.0549)              (0.0546)       
