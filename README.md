@@ -36,7 +36,8 @@ ECC3479-PROJECT-GROUP/
 │
 ├── jupyter/
 │   └── EDA.ipynb
-│
+│   └── analysis.ipynb
+│    
 ├── outputs/
 │   └── .gitkeep
 │
