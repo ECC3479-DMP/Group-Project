@@ -35,6 +35,7 @@ ECC3479-PROJECT-GROUP/
 ├── jupyter/
 │   └── EDA.ipynb
 │   └── analysis.ipynb
+│   └── robustness.ipynb
 │    
 ├── outputs/
 │   └── .gitkeep
@@ -105,6 +106,9 @@ The scripts must be executed in the following sequence:
 - FormatCode_VIC_ Stringency.py *
 - CleanCode_VIC_NSW_Unemployment.py
 - Unemployment_Stringency_Merge.py
+- EDA.ipynb 
+- analysis.ipynb
+- robustness.ipynb
 
 *This was to format our target states into columns rather than rows as given in raw data
 We chose to do this separately so that we could keep track of errors easier
@@ -189,6 +193,19 @@ Unemployment_Stringency_Merge.py
 - Outputs merged_stringency_unemployment.csv
 
 
+Analysis
+- DiD used to estimate impact of Victoria’s stricter COVID lockdowns on unemployment vs NSW
+- Pre-COVID and acute 2016–2021 model is main causal estimate
+- Treatment effect negative but statistically insignificant
+- Parallel trends supported
+- Validity limited by industry differences, spillovers, and measurement error
+- Full analysis in analysis.ipynb
+
+Robustness
+ - All robustness checks keep the DiD estimate negative and insignificant.
+ - Results stay similar when changing the sample window.
+ - Findings consistently show no reliable evidence of a differential unemployment effect.
+
 Final Cleaned Data: 
 Unemployment_Stringency_Merge.py
 
@@ -206,11 +223,3 @@ The EDA section contains all exploratory data analysis used to understand the be
 
  This step is Important because it guides the modelling approach and ensures the dataset is reliable and suitable for causal analysis. 
 
---- 
-Analysis
-- DiD used to estimate impact of Victoria’s stricter COVID lockdowns on unemployment vs NSW
-- Pre-COVID and acute 2016–2021 model is main causal estimate
-- Treatment effect negative but statistically insignificant
-- Parallel trends supported
-- Validity limited by industry differences, spillovers, and measurement error
-- Full analysis in analysis.ipynb
