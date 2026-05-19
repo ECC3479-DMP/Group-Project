@@ -82,7 +82,7 @@ Raw Data:
 How to Run the Project From Scratch
 
 1. Install Required Software
-This project uses Python 3.10+.
+This project uses Python 3.11+.
 Install required packages:
 pip install pandas 
 pip install openpyxl
