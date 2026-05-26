@@ -82,7 +82,7 @@ Raw Data:
 How to Run the Project From Scratch
 
 1. Install Required Software
-This project uses Python 3.10+.
+This project uses Python 3.11+.
 Install required packages:
 pip install pandas 
 pip install openpyxl
@@ -223,3 +223,12 @@ The EDA section contains all exploratory data analysis used to understand the be
 
  This step is Important because it guides the modelling approach and ensures the dataset is reliable and suitable for causal analysis. 
 
+----
+REPORT SUBMISSION 
+Table 1: produce by jupyter/analysis.ipynb 
+
+Table 2: produce by jupyter/analysis.ipynb 
+        - derived data from our two regression tables: acute model and full model 
+        - didn't use the entire table, only got relevant stats for our report
+
+Table 3: produced by jupyter/robustness.ipynb
